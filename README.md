@@ -2,7 +2,9 @@
 
 Esta é a coleção do Postman para testar as APIs deste projeto. Você pode importar esta coleção diretamente no Postman.
 
-[Baixar a coleção do Postman](postman/exported-collection.json)
+[Baixar a coleção do Postman](postman/Category.postman_collection.json)
+[Baixar a coleção do Postman](postman/Products.postman_collection.json)
+[Baixar a coleção do Postman](postman/Suplier.postman_collection.json)
 
 ### Como Importar a Coleção no Postman
 
