@@ -17,9 +17,15 @@ Esta é a coleção do Postman para testar as APIs deste projeto. Você pode imp
 ## Tecnologias Utilizadas
 
 •⁠  ⁠*Java
+
 •⁠  ⁠*Spring Boot 2.3.x
+
 •⁠  ⁠*Spring Data JPA*
+
 •⁠  ⁠*Hibernate*
+
 •⁠  *PostgreSQL*
+
 •⁠  ⁠*Docker*
+
 •⁠  ⁠*JUnit 5* e *Mockito* (para testes)
