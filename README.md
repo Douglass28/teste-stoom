@@ -11,7 +11,9 @@ Esta é a coleção do Postman para testar as APIs deste projeto. Você pode imp
 ### Como Importar a Coleção no Postman
 
 1.⁠ ⁠Abra o Postman.
+
 2.⁠ ⁠Clique em "Importar" no canto superior esquerdo.
+
 3.⁠ ⁠Selecione o arquivo JSON da coleção baixada.
 
 ## Tecnologias Utilizadas
