@@ -1,4 +1,4 @@
-## Coleção do Postman
+## Collection do Postman
 
 Esta é a coleção do Postman para testar as APIs deste projeto. Você pode importar esta coleção diretamente no Postman.
 
