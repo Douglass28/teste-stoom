@@ -26,6 +26,4 @@ Esta é a coleção do Postman para testar as APIs deste projeto. Você pode imp
 
 •⁠  *PostgreSQL*
 
-•⁠  ⁠*Docker*
-
 •⁠  ⁠*JUnit 5* e *Mockito* (para testes)
