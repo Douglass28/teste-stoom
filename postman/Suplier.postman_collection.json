@@ -1,0 +1,196 @@
+{
+  "info": {
+    "_postman_id": "fffca08a-f30f-4372-97f9-b445ac79375e",
+    "name": "Suplier",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "21372564",
+    "_collection_link": "https://orange-flare-337812.postman.co/workspace/Api-teste-stoom~460e6329-cc86-4704-a8d6-1999b683df07/collection/21372564-fffca08a-f30f-4372-97f9-b445ac79375e?action=share&source=collection_link&creator=21372564"
+  },
+  "item": [
+    {
+      "name": "create-suplier",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"name\": \"Gandini Veiculos\",\n    \"address\": \"Rua Quaresma\",\n    \"phone\": \"154342347\",\n    \"suplierId\": \"7\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8081/api/suplier",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8081",
+          "path": [
+            "api",
+            "suplier"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "getAll-suplier",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "GET",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"name\": \"Casas Bahia\",\n    \"address\": \"Rua 30 de Abril\",\n    \"phone\": \"1543456879\",\n    \"suplierId\": \"5\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8081/api/suplier",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8081",
+          "path": [
+            "api",
+            "suplier"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "get-suplier-by-id",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "GET",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"name\": \"Casas Bahia\",\n    \"address\": \"Rua 30 de Abril\",\n    \"phone\": \"1543456879\",\n    \"suplierId\": \"5\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8081/api/suplier/41",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8081",
+          "path": [
+            "api",
+            "suplier",
+            "41"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "put-suplier-by-id",
+      "request": {
+        "method": "PUT",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"name\": \"DoctorCell\",\n    \"address\": \"Rua 23 de maio\",\n    \"phone\": \"154345609890\",\n    \"suplierId\": \"1\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8081/api/suplier/25",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8081",
+          "path": [
+            "api",
+            "suplier",
+            "25"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "update-suplier-ToInactive",
+      "request": {
+        "method": "PATCH",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"active\": false\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8081/api/suplier/active/25",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8081",
+          "path": [
+            "api",
+            "suplier",
+            "active",
+            "25"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "delete-suplier-by-id",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"name\": \"Just Nike\",\n    \"address\": \"Rua 23 de maio\",\n    \"phone\": \"1543456\",\n    \"suplierId\": \"3\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8081/api/suplier/26",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8081",
+          "path": [
+            "api",
+            "suplier",
+            "26"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}

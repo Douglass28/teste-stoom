@@ -1,0 +1,227 @@
+{
+  "info": {
+    "_postman_id": "04663103-9263-4879-a9e7-fcbc12283d37",
+    "name": "Products",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "21372564",
+    "_collection_link": "https://orange-flare-337812.postman.co/workspace/Api-teste-stoom~460e6329-cc86-4704-a8d6-1999b683df07/collection/21372564-04663103-9263-4879-a9e7-fcbc12283d37?action=share&source=collection_link&creator=21372564"
+  },
+  "item": [
+    {
+      "name": "save-product",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"name\": \"Guarda-roupa\",\n  \"sku\": \"SKU-12345\",\n  \"brand\": \"Amil\",\n  \"description\": \"Novo guarda-roupa\",\n  \"category\": {\n    \"categoryId\": \"20\"\n  },\n  \"price\": 1000.99,\n   \"suplier\": {\n    \"suplierId\": \"5\"\n  }\n\n}\n",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8081/v1/api/products",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8081",
+          "path": [
+            "v1",
+            "api",
+            "products"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "get-all-product",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8081/v1/api/products",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8081",
+          "path": [
+            "v1",
+            "api",
+            "products"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "get-product-By-Id",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8081/v1/api/products/find/502",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8081",
+          "path": [
+            "v1",
+            "api",
+            "products",
+            "find",
+            "502"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "get-product-By-Brand",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8081/v1/api/products/find/brand/Adidas",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8081",
+          "path": [
+            "v1",
+            "api",
+            "products",
+            "find",
+            "brand",
+            "Adidas"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "get-product-By-Id-Category",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8081/v1/api/products/find/category/34",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8081",
+          "path": [
+            "v1",
+            "api",
+            "products",
+            "find",
+            "category",
+            "34"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "update-product-by-ID",
+      "request": {
+        "method": "PATCH",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"name\": \"Camiseta polo v12\",\n  \"sku\": \"SKU-122244\",\n  \"brand\": \"Nike\",\n  \"description\": \"Camiseta nike polo v12branca\",\n  \"suplier\": {\n    \"name\": \"NikeStore\",\n    \"address\": \"Rua Dao Pedro 1\",\n    \"phone\": \"11900043567\"\n  },\n  \"price\": 160.00,\n  \"category\": {\n    \"name\": \"Roupa\",\n    \"description\": \"Roupa em geral\"\n  },\n  \"active\": true\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8081/v1/api/products/61",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8081",
+          "path": [
+            "v1",
+            "api",
+            "products",
+            "61"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "update-product-ToInactive",
+      "request": {
+        "method": "PATCH",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"active\": true\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8081/v1/api/products/active/61",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8081",
+          "path": [
+            "v1",
+            "api",
+            "products",
+            "active",
+            "61"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "deleteProduct",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8081/v1/api/products/152",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8081",
+          "path": [
+            "v1",
+            "api",
+            "products",
+            "152"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
