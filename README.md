@@ -13,3 +13,13 @@ Esta é a coleção do Postman para testar as APIs deste projeto. Você pode imp
 1.⁠ ⁠Abra o Postman.
 2.⁠ ⁠Clique em "Importar" no canto superior esquerdo.
 3.⁠ ⁠Selecione o arquivo JSON da coleção baixada.
+
+## Tecnologias Utilizadas
+
+•⁠  ⁠*Java
+•⁠  ⁠*Spring Boot 2.3.x
+•⁠  ⁠*Spring Data JPA*
+•⁠  ⁠*Hibernate*
+•⁠  *PostgreSQL*
+•⁠  ⁠*Docker*
+•⁠  ⁠*JUnit 5* e *Mockito* (para testes)
