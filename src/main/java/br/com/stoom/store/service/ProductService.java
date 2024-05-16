@@ -82,7 +82,7 @@ public class ProductService {
     public Product updateProduct(String id, ProductRequest updateProduct) {
 
         Product productExists = productRepository.findById(Long.valueOf(id))
-                .orElseThrow(ProductException::new);
+                .orElseThrow(()-> new ProductException("Product not found with id: " + id));
 
         productExists.setName(updateProduct.getName());
         productExists.setPrice(updateProduct.getPrice());
@@ -96,7 +96,7 @@ public class ProductService {
     public Product updateProductActive(String id, boolean active) {
 
         Product product = productRepository.findById(Long.valueOf(id))
-                .orElseThrow(() -> new RuntimeException("Product not found with id: " + id));
+                .orElseThrow(() -> new ProductException("Product not found with id: " + id));
 
         product.setActive(active);
         return productRepository.save(product);
@@ -105,8 +105,8 @@ public class ProductService {
     public void deleteProduct(String id){
         try {
             productRepository.deleteById(Long.valueOf(id));
-        } catch (RuntimeException e){
-            throw new RuntimeException("Id product not existis");
+        } catch (ProductException e){
+            throw new ProductException("Id product not existis: " + id );
         }
 
     }

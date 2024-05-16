@@ -1,6 +1,8 @@
 package br.com.stoom.store.service;
 
 import br.com.stoom.store.exception.CategoryException;
+import br.com.stoom.store.exception.ProductException;
+import br.com.stoom.store.exception.SuplierException;
 import br.com.stoom.store.model.Category;
 import br.com.stoom.store.model.Suplier;
 import br.com.stoom.store.model.request.CategoryRequest;
@@ -43,15 +45,15 @@ public class SuplierService {
         try {
             Suplier suplier = suplierRepository.findBySuplierId(id);
             return suplier;
-        }catch (EntityNotFoundException exception){
-            throw new EntityNotFoundException("Suplier not found with ID: " + id);
+        }catch (SuplierException exception){
+            throw new SuplierException("Suplier not found with ID: " + id);
         }
 
     }
     public Suplier updateSuplier(String id, SuplierRequest request){
 
         Suplier updateSuplier = this.suplierRepository.findById(Long.valueOf(id))
-                .orElseThrow(RuntimeException::new);
+                .orElseThrow(() -> new SuplierException("Suplier not found with id: " + id));
 
         if (!request.getName().isEmpty()) updateSuplier.setName(request.getName());
         if (!request.getAddress().isEmpty()) updateSuplier.setAddress(request.getAddress());
@@ -67,7 +69,7 @@ public class SuplierService {
     public Suplier updateSuplierActive(String id, boolean active) {
 
         Suplier suplier = suplierRepository.findById(Long.valueOf(id))
-                .orElseThrow(() -> new RuntimeException("Category not found with id: " + id));
+                .orElseThrow(() -> new SuplierException("Suplier not found with id: " + id));
 
         suplier.setActive(active);
         return suplierRepository.save(suplier);
@@ -75,7 +77,7 @@ public class SuplierService {
 
     public Void deleteSuplier(String id){
         Suplier suplier = this.suplierRepository.findById(Long.valueOf(id))
-                .orElseThrow(RuntimeException::new);
+                .orElseThrow(() -> new SuplierException("Suplier not found with id: " + id));
 
         this.suplierRepository.delete(suplier);
 

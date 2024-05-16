@@ -1,6 +1,7 @@
 package br.com.stoom.store.service;
 
 import br.com.stoom.store.exception.CategoryException;
+import br.com.stoom.store.exception.ProductException;
 import br.com.stoom.store.model.Category;
 import br.com.stoom.store.model.Product;
 import br.com.stoom.store.model.request.CategoryRequest;
@@ -40,7 +41,7 @@ public class CategoryService {
     public Category updateCategory(String id, CategoryRequest request){
 
         Category updateCategory = this.categoryRepository.findById(Long.valueOf(id))
-                .orElseThrow(CategoryException::new);
+                .orElseThrow(()-> new CategoryException("Category not found with id: " + id));
 
         if (!request.getCategoryId().isEmpty()) updateCategory.setCategoryId(request.getCategoryId());
         if (!request.getDescription().isEmpty()) updateCategory.setDescription(request.getDescription());
@@ -55,7 +56,7 @@ public class CategoryService {
     public Category updateCategoryActive(String id, boolean active) {
 
         Category category = categoryRepository.findById(Long.valueOf(id))
-                .orElseThrow(() -> new RuntimeException("Category not found with id: " + id));
+                .orElseThrow(() -> new CategoryException("Category not found with id: " + id));
 
         category.setActive(active);
         return categoryRepository.save(category);
@@ -73,7 +74,7 @@ public class CategoryService {
 
     public Void deleteCategory(String id){
         Category category = this.categoryRepository.findById(Long.valueOf(id))
-                .orElseThrow(CategoryException::new);
+                .orElseThrow(()-> new CategoryException("Category not found with id: " + id));
 
         this.categoryRepository.delete(category);
 
